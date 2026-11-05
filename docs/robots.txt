@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maumoya.github.io/PRO-Portfolio-DEV/sitemap.xml

@@ -1,0 +1,27 @@
+# Mauricio Moya
+
+> Open-source Claude Code skills, browser games and finance systems, each one signed, tested and measured.
+
+I'm an MBA and finance leader who builds the systems: agent skills for Claude Code, finance automation and fast browser games. Every repo ships with evals, a security score and a number you can check.
+
+## Projects
+
+- [adhd-status](https://github.com/maumoya/adhd-status): Say STATUS, get one tiny table and one clickable next step. Eval score 0.96 vs 0.50 without it, 35% less spend per STATUS.
+- [resource-optimizer](https://github.com/maumoya/resource-optimizer): Frees disk space safely: it measures first and you approve every delete. Freed 21% of a real Mac mini disk.
+- [skill-forger-e2e](https://github.com/maumoya/skill-forger-e2e): Ships an agent skill end to end, from idea to a secured, launched plugin. One-command retrofit: readiness 14 → 66.
+- [Boredom Blaster v2](https://github.com/maumoya/boredom-blaster-v2): A fast neon space shooter with bosses, power-ups and global scores.
+- [Boredom Blaster v1](https://github.com/maumoya/boredom-blaster-play): The original retro shooter in one HTML file, no engine, no login. 13.6 KB, the whole game.
+- [Christian Trivia](https://github.com/maumoya/christian-trivia): Bible trivia for kids 5-10, in English and Spanish.
+- [Ghost Text](https://github.com/maumoya/LKND-ghost-text): Self-destructing LinkedIn messages, built on top of a tool that already works. 0 network calls.
+- [maumoya.github.io](https://github.com/maumoya/maumoya.github.io): The full portfolio: agent tools, finance work and browser games.
+
+## Skills
+
+Claude Code skills, AI agents, LLM evals, Python, JavaScript, TypeScript, Shell, GitHub Actions, OpenSSF Scorecard, FP&A, Finance automation, Dashboards, SQL, Canvas games
+
+## Contact
+
+- github: https://github.com/maumoya
+- linkedin: https://www.linkedin.com/in/mba-mmoyat/
+- x: https://x.com/mau_amt
+- website: https://maumoya.github.io/
