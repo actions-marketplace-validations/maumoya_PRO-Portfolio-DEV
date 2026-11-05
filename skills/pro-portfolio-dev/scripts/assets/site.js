@@ -168,6 +168,18 @@
     $$('.fx').forEach(function (el) { io.observe(el); });
   }
 
+  // ---- #tour: an 8-second self-running demo (typo search, languages, right-to-left, a theme) for recordings
+  if (location.hash === '#tour') {
+    var at = 0, step = function (ms, fn) { at += ms; setTimeout(fn, at); };
+    'finanse'.split('').forEach(function (c) { step(110, function () { q.focus(); q.value += c; show(); }); });
+    step(1300, function () { go(res[0]); });
+    step(1400, function () { scrollTo({ top: 0, behavior: 'smooth' }); setLang('es'); });
+    step(1100, function () { setLang('ja'); });
+    step(1000, function () { setLang('ar'); });
+    step(1000, function () { setTheme('ocean'); });
+    step(1000, function () { setLang('en'); });
+  }
+
   var pref = store.get('ppd-lang') || (navigator.language || 'en').slice(0, 2);
   setTheme(store.get('ppd-theme'));
   if (pref !== 'en') setLang(pref); else { $$('#lang-list [role=option]').forEach(function (o) { o.setAttribute('aria-selected', String(o.dataset.l === 'en')); }); }
