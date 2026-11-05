@@ -1,0 +1,25 @@
+# Fuzz: 60 s of Atheris on check.py's HTML scan for every PR. No API key, no network beyond pip.
+name: Fuzz
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions: read-all
+
+jobs:
+  fuzz:
+    name: Fuzz check.py
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Fuzz 60 s
+        run: |
+          python3 -m pip install --quiet --require-hashes -r fuzz/requirements.txt
+          python3 fuzz/fuzz_check.py -max_total_time=60

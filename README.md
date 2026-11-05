@@ -89,7 +89,8 @@ Picked from the numbers above:
 
 ## How it is tested
 
-- `tests/` runs 7 offline unit tests on every PR (build, refuse unknown repos, HTML escaping, all 10 languages, a broken share image fails).
+- `tests/` runs 9 offline unit tests on every PR (build, refuse unknown repos, HTML escaping, all 10 languages, a broken share image fails).
+- `fuzz/` runs 60 s of [Atheris](https://github.com/google/atheris) fuzzing on `check.py` on every PR; it found and fixed two crashes.
 - `.github/workflows/action-test.yml` runs the Action on a good site (must score 100) and a broken one (must fail).
 - `evals/` holds one case per promise. Run `claude plugin eval . --allow-tools` (real model runs, billed to your account).
 

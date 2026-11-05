@@ -33,9 +33,9 @@ class Scan(html.parser.HTMLParser):
             self.meta[a.get("name") or a.get("property")] = a["content"]
         elif tag == "img" and not a.get("alt"):
             self.imgs_no_alt += 1
-        elif tag == "script" and a.get("src", "").startswith(("http", "//")):
+        elif tag == "script" and (a.get("src") or "").startswith(("http", "//")):
             self.external.append(a["src"])
-        elif tag == "link" and a.get("rel") == "stylesheet" and a.get("href", "").startswith(("http", "//")):
+        elif tag == "link" and a.get("rel") == "stylesheet" and (a.get("href") or "").startswith(("http", "//")):
             self.external.append(a["href"])
         elif tag == "link" and a.get("rel") == "canonical":
             self.canon = a.get("href")
@@ -67,7 +67,7 @@ def i18n_check(raw: str) -> tuple:
         ui = json.loads(raw)["ui"]
         keys = set(ui["en"])
         return (name, all(set(v) == keys for v in ui.values()))
-    except (ValueError, KeyError):
+    except (ValueError, KeyError, TypeError, AttributeError):
         return (name, False)
 
 
