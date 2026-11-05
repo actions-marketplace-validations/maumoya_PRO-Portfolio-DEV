@@ -61,9 +61,9 @@
    "archived": false
   },
   {
-   "name": "hubco",
-   "description": "HubCO: a marketplace connecting homes with vetted service pros. Showcase only, no source code.",
-   "html_url": "https://github.com/maumoya/hubco",
+   "name": "project-6",
+   "description": "Project #6 · Home services. In development, private until launch.",
+   "html_url": "https://github.com/maumoya/project-6",
    "homepage": "https://maumoya.github.io/#building",
    "language": null,
    "topics": [],
@@ -271,9 +271,9 @@
    "archived": false
   },
   {
-   "name": "paperpro",
-   "description": "PaperPRO: a research lab that checks every citation. Showcase only, no source code.",
-   "html_url": "https://github.com/maumoya/paperpro",
+   "name": "project-3",
+   "description": "Project #3 · Research. In development, private until launch.",
+   "html_url": "https://github.com/maumoya/project-3",
    "homepage": "https://maumoya.github.io/#building",
    "language": null,
    "topics": [],
@@ -285,9 +285,9 @@
    "archived": false
   },
   {
-   "name": "production-environment",
-   "description": "Production Environment: an agent-run software line with a human sign-off. Showcase only, no source code.",
-   "html_url": "https://github.com/maumoya/production-environment",
+   "name": "project-2",
+   "description": "Project #2 · Software delivery. In development, private until launch.",
+   "html_url": "https://github.com/maumoya/project-2",
    "homepage": "https://maumoya.github.io/#building",
    "language": null,
    "topics": [],
@@ -299,9 +299,9 @@
    "archived": false
   },
   {
-   "name": "vision-showcase",
-   "description": "VISION: one control center for a safe team of AI agents. Showcase only, no source code.",
-   "html_url": "https://github.com/maumoya/vision-showcase",
+   "name": "project-1",
+   "description": "Project #1 · AI harness. In development, private until launch.",
+   "html_url": "https://github.com/maumoya/project-1",
    "homepage": "https://maumoya.github.io/#building",
    "language": null,
    "topics": [],
