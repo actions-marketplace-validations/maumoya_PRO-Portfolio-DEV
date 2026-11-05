@@ -1,0 +1,22 @@
+# Pro Portfolio Dev
+
+> Turns your GitHub repos into a live portfolio landing page: plans, builds and publishes it on GitHub Pages with SEO, llms.txt, sitemap, share image, themes, languages and sound.
+
+## Install
+
+- Claude Code: `/plugin marketplace add maumoya/PRO-Portfolio-DEV` then `/plugin install pro-portfolio-dev@pro-portfolio-dev`
+- Any agent: `npx skills add maumoya/PRO-Portfolio-DEV`
+
+## How it works
+
+1. `fetch.py USER` saves the user's public repos (2 GitHub API calls, no token).
+2. The agent proposes projects and writes `plan.json` from real repo facts only.
+3. `build.py` writes one self-contained page (no external requests) plus og.png, sitemap.xml, robots.txt, llms.txt and favicon.svg; `check.py` runs 23 checks.
+4. `publish.sh` (only after the user says yes) pushes to GitHub Pages and times it until the new build is live.
+
+Live demo: https://maumoya.github.io/PRO-Portfolio-DEV/
+
+## Files
+
+- [SKILL.md](https://github.com/maumoya/PRO-Portfolio-DEV/blob/main/skills/pro-portfolio-dev/SKILL.md): the skill
+- [README.md](https://github.com/maumoya/PRO-Portfolio-DEV/blob/main/README.md): what it does and how to install it

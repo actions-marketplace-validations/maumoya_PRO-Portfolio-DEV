@@ -1,0 +1,72 @@
+{
+ "user": {
+  "login": "maumoya",
+  "name": "Mauricio Moya",
+  "bio": "I build agent skills for Claude, systems to drive Profits, and fast browser games to foster my Creativity. Open source, signed, measured, and 100% safe !",
+  "blog": "https://maumoya.github.io",
+  "location": "Vermont, USA",
+  "twitter_username": "mau_amt",
+  "html_url": "https://github.com/maumoya",
+  "avatar_url": "https://avatars.githubusercontent.com/u/63534915?v=4",
+  "public_repos": 17
+ },
+ "repos": [
+  {
+   "name": "adhd-status",
+   "description": "ADHD-friendly status board skill for Claude Code and AI agents. Say STATUS, get one tiny table and one clickable next step. Measured: eval score 0.96 vs 0.50 without the skill, 35% less spend per STATUS. Free, open source (MIT).",
+   "html_url": "https://github.com/maumoya/adhd-status",
+   "homepage": "https://maumoya.github.io/adhd-status/progress.html",
+   "language": "TypeScript",
+   "topics": [
+    "adhd",
+    "adhd-friendly",
+    "agent-skills",
+    "ai-agents",
+    "claude",
+    "claude-code",
+    "claude-code-plugin",
+    "claude-skill",
+    "context-management",
+    "developer-tools",
+    "executive-function",
+    "focus",
+    "llm",
+    "mit-license",
+    "neurodivergent",
+    "open-source",
+    "productivity",
+    "skills",
+    "status",
+    "task-tracking"
+   ],
+   "stargazers_count": 2,
+   "forks_count": 0,
+   "pushed_at": "2026-11-05T02:08:31Z",
+   "created_at": "2026-11-01T21:39:18Z",
+   "fork": false,
+   "archived": false
+  },
+  {
+   "name": "resource-optimizer",
+   "description": "Claude Code skill that frees disk space safely on macOS and Linux. Measures first, you approve every delete. Freed 21% of a real Mac mini disk (103.8 GB).",
+   "html_url": "https://github.com/maumoya/resource-optimizer",
+   "homepage": null,
+   "language": "Shell",
+   "topics": [
+    "agent-skills",
+    "claude-code",
+    "claude-skill",
+    "disk-cleanup",
+    "linux",
+    "macos",
+    "storage"
+   ],
+   "stargazers_count": 1,
+   "forks_count": 0,
+   "pushed_at": "2026-11-04T03:16:09Z",
+   "created_at": "2026-11-04T01:00:29Z",
+   "fork": false,
+   "archived": false
+  }
+ ]
+}

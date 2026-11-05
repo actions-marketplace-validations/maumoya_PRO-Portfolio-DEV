@@ -1,0 +1,27 @@
+{
+ "name": "Mauricio Moya",
+ "job": "Finance Leader & AI Agent Engineer",
+ "url": "https://maumoya.github.io/PRO-Portfolio-DEV/",
+ "headline": "Agent skills that prove their numbers.",
+ "tagline": "Open-source Claude Code skills, browser games and finance systems, each one signed, tested and measured.",
+ "about": "I'm an MBA and finance leader who builds the systems: agent skills for Claude Code, finance automation and fast browser games. Every repo ships with evals, a security score and a number you can check.",
+ "links": {"github": "https://github.com/maumoya", "linkedin": "https://www.linkedin.com/in/mba-mmoyat/", "x": "https://x.com/mau_amt", "website": "https://maumoya.github.io/"},
+ "skills": ["Claude Code skills", "AI agents", "LLM evals", "Python", "JavaScript", "TypeScript", "Shell", "GitHub Actions", "OpenSSF Scorecard", "FP&A", "Finance automation", "Dashboards", "SQL", "Canvas games"],
+ "experience": [
+  {"role": "AI Agent Engineer", "org": "Open source", "years": "2025-now", "text": "Agent skills and plugins for Claude Code, shipped with evals, signed releases and OpenSSF badges.", "keywords": "ai agents llm claude skills evals security"},
+  {"role": "Finance Leader, MBA", "org": "Finance and operations", "years": "20 years", "text": "FP&A, cash flow, grant compliance and internal controls, run on automation and dashboards.", "keywords": "finance fp&a budget forecasting controller cfo compliance audit"}
+ ],
+ "projects": [
+  {"repo": "adhd-status", "title": "adhd-status", "pitch": "Say STATUS, get one tiny table and one clickable next step.", "proof": "Eval score 0.96 vs 0.50 without it, 35% less spend per STATUS.", "tags": ["Claude Code", "skill", "ADHD"], "demo": "https://maumoya.github.io/adhd-status/progress.html"},
+  {"repo": "resource-optimizer", "title": "resource-optimizer", "pitch": "Frees disk space safely: it measures first and you approve every delete.", "proof": "Freed 21% of a real Mac mini disk.", "tags": ["Claude Code", "skill", "macOS", "Linux"]},
+  {"repo": "skill-forger-e2e", "title": "skill-forger-e2e", "pitch": "Ships an agent skill end to end, from idea to a secured, launched plugin.", "proof": "One-command retrofit: readiness 14 → 66.", "tags": ["Claude Code", "plugin authors", "GitHub Action"]},
+  {"repo": "boredom-blaster-v2", "title": "Boredom Blaster v2", "pitch": "A fast neon space shooter with bosses, power-ups and global scores.", "tags": ["game", "canvas", "JavaScript"]},
+  {"repo": "boredom-blaster-play", "title": "Boredom Blaster v1", "pitch": "The original retro shooter in one HTML file, no engine, no login.", "proof": "13.6 KB, the whole game.", "tags": ["game", "HTML5"]},
+  {"repo": "christian-trivia", "title": "Christian Trivia", "pitch": "Bible trivia for kids 5-10, in English and Spanish.", "tags": ["game", "education", "kids"]},
+  {"repo": "LKND-ghost-text", "title": "Ghost Text", "pitch": "Self-destructing LinkedIn messages, built on top of a tool that already works.", "proof": "0 network calls.", "tags": ["Chrome extension", "privacy"]},
+  {"repo": "maumoya.github.io", "title": "maumoya.github.io", "pitch": "The full portfolio: agent tools, finance work and browser games.", "tags": ["portfolio", "HTML"]}
+ ],
+ "t": {
+  "es": {"headline": "Skills de IA que demuestran sus números.", "tagline": "Skills de código abierto para Claude Code, juegos de navegador y sistemas financieros: todos firmados, probados y medidos.", "about": "Soy MBA y líder financiero, y construyo los sistemas: skills para Claude Code, automatización financiera y juegos de navegador rápidos. Cada repositorio trae evaluaciones, un puntaje de seguridad y un número que puedes verificar.", "p.adhd-status.pitch": "Escribe STATUS y recibe una tabla mínima con un único siguiente paso.", "p.adhd-status.proof": "Puntaje de 0.96 frente a 0.50 sin la skill, y 35% menos de gasto por STATUS.", "p.resource-optimizer.pitch": "Libera espacio en disco sin riesgos: primero mide y tú apruebas cada borrado.", "p.resource-optimizer.proof": "Liberó el 21% del disco de una Mac mini real.", "p.skill-forger-e2e.pitch": "Lleva una skill de agente de la idea a un plugin seguro y publicado.", "p.skill-forger-e2e.proof": "Adaptación en un comando: preparación de 14 a 66.", "p.boredom-blaster-v2.pitch": "Un shooter espacial neón y veloz, con jefes, power-ups y ranking mundial.", "p.boredom-blaster-play.pitch": "El shooter retro original en un solo archivo HTML, sin motor y sin registro.", "p.boredom-blaster-play.proof": "13,6 KB: el juego completo.", "p.christian-trivia.pitch": "Trivia bíblica para niños de 5 a 10 años, en inglés y español.", "p.LKND-ghost-text.pitch": "Mensajes de LinkedIn que se autodestruyen, construidos sobre una herramienta que ya funciona.", "p.LKND-ghost-text.proof": "Cero llamadas de red.", "p.maumoya.github.io.pitch": "El portafolio completo: herramientas de IA, finanzas y juegos de navegador.", "xp.0": "Skills y plugins para Claude Code, con evaluaciones, versiones firmadas e insignias de OpenSSF.", "xp.1": "FP&A, flujo de caja, cumplimiento de subvenciones y control interno, apoyados en automatización y dashboards."}
+ }
+}

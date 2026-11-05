@@ -1,0 +1,42 @@
+{
+ "name": "Test User",
+ "url": "https://example.github.io/",
+ "headline": "Tools that prove it.",
+ "tagline": "Two small tools.",
+ "skills": [
+  "Python"
+ ],
+ "experience": [
+  {
+   "role": "Engineer",
+   "org": "Acme",
+   "years": "2020",
+   "text": "Built things.",
+   "keywords": "finance"
+  }
+ ],
+ "projects": [
+  {
+   "repo": "adhd-status",
+   "title": "adhd-status",
+   "pitch": "One tiny table.",
+   "proof": "0.96 vs 0.50",
+   "tags": [
+    "skill"
+   ]
+  },
+  {
+   "repo": "resource-optimizer",
+   "title": "resource-optimizer",
+   "pitch": "Frees disk space.",
+   "tags": [
+    "macOS"
+   ]
+  }
+ ],
+ "t": {
+  "es": {
+   "headline": "Herramientas que lo demuestran."
+  }
+ }
+}

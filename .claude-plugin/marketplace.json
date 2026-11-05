@@ -1,0 +1,17 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "pro-portfolio-dev",
+  "description": "Turns your GitHub repos into a live portfolio landing page: plans, builds and publishes it on GitHub Pages with SEO, llms.txt, sitemap, share image, themes, languages and sound.",
+  "owner": {
+    "name": "Mauricio Alonso Moya Tapia"
+  },
+  "plugins": [
+    {
+      "name": "pro-portfolio-dev",
+      "description": "Turns your GitHub repos into a live portfolio landing page: plans, builds and publishes it on GitHub Pages with SEO, llms.txt, sitemap, share image, themes, languages and sound.",
+      "source": "./",
+      "category": "productivity",
+      "keywords": ["claude-code", "claude-skill", "agent-skills"]
+    }
+  ]
+}

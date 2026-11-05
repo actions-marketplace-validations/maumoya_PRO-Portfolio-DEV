@@ -1,0 +1,13 @@
+{
+  "name": "pro-portfolio-dev",
+  "version": "0.1.0",
+  "description": "Turns your GitHub repos into a live portfolio landing page: plans, builds and publishes it on GitHub Pages with SEO, llms.txt, sitemap, share image, themes, languages and sound.",
+  "author": {
+    "name": "Mauricio Alonso Moya Tapia",
+    "url": "https://github.com/maumoya"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/maumoya/PRO-Portfolio-DEV",
+  "repository": "https://github.com/maumoya/PRO-Portfolio-DEV",
+  "keywords": ["claude-code", "claude-skill", "agent-skills"]
+}

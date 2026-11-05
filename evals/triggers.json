@@ -1,0 +1,13 @@
+{
+  "skill": "pro-portfolio-dev",
+  "queries": [
+    { "text": "build my portfolio from my GitHub repos", "trigger": true },
+    { "text": "turn my repos into a website I can send to recruiters", "trigger": true },
+    { "text": "make me a developer portfolio landing page and put it on GitHub Pages", "trigger": true },
+    { "text": "I need a personal site that shows off my projects, my github is janedev", "trigger": true },
+    { "text": "can u make a portfollio page from my github pls", "trigger": true, "holdout": true },
+    { "text": "write a README for this repo", "trigger": false },
+    { "text": "fix the failing GitHub Actions workflow in this project", "trigger": false },
+    { "text": "design a landing page for my coffee shop", "trigger": false, "holdout": true }
+  ]
+}
