@@ -16,6 +16,14 @@
 
 Live demo: https://maumoya.github.io/PRO-Portfolio-DEV/
 
+## GitHub Action
+
+- `uses: maumoya/PRO-Portfolio-DEV@v0.1.0` with `site:` and `min-score:` runs check.py on any static site (no network). Marketplace: https://github.com/marketplace/actions/portfolio-page-seo-check
+
+## Measured (2026-11-04, live demo)
+
+- Repo list to live page 23 s; 23/23 checks; Lighthouse mobile SEO 100, accessibility 100, best practices 100; script cost $0.
+
 ## Files
 
 - [SKILL.md](https://github.com/maumoya/PRO-Portfolio-DEV/blob/main/skills/pro-portfolio-dev/SKILL.md): the skill

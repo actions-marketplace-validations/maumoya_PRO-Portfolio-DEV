@@ -1,0 +1,16 @@
+{
+  "measured": "2026-11-04",
+  "repos_to_live_s": 23,
+  "repos_to_live_s_queued": 324,
+  "local_pipeline_s": 1,
+  "checks": "23/23",
+  "lighthouse_mobile": {
+    "seo": 100,
+    "accessibility": 100,
+    "best_practices": 100
+  },
+  "lab_lcp_ms": 167,
+  "lab_cls": 0,
+  "script_cost_usd": 0,
+  "github_api_calls": 2
+}
