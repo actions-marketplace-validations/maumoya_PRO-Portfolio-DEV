@@ -1,0 +1,46 @@
+name: Portfolio page SEO check
+description: "Checks a static site before GitHub Pages: share tags, JSON-LD, sitemap, 1200x630 image, alt text, page weight."
+author: Mauricio Alonso Moya Tapia
+branding:
+  icon: check-circle
+  color: purple
+inputs:
+  site:
+    description: Folder with the built site (index.html at its root).
+    default: site
+  min-score:
+    description: Fail the step when fewer checks pass than this percent (100 = every check must pass).
+    default: "100"
+outputs:
+  passed:
+    description: Checks that passed.
+    value: ${{ steps.check.outputs.passed }}
+  total:
+    description: Checks run.
+    value: ${{ steps.check.outputs.total }}
+  score:
+    description: Percent of checks that passed.
+    value: ${{ steps.check.outputs.score }}
+runs:
+  using: composite
+  steps:
+    - name: Check site (read-only, no network)
+      id: check
+      shell: bash
+      env:
+        SITE: ${{ inputs.site }}
+        MIN: ${{ inputs.min-score }}
+        CHECK: ${{ github.action_path }}/skills/pro-portfolio-dev/scripts/check.py
+      run: |
+        case "$MIN" in ''|*[!0-9]*) echo "::error::min-score must be a whole number 0-100"; exit 2 ;; esac
+        [ -f "$SITE/index.html" ] || { echo "::error::no index.html in '$SITE'"; exit 2; }
+        out="$(python3 "$CHECK" "$SITE" || true)"
+        echo "$out"
+        last="$(tail -1 <<<"$out")"; frac="${last##* }"; passed="${frac%/*}"; total="${frac#*/}"
+        score=$(( passed * 100 / total ))
+        { echo "passed=$passed"; echo "total=$total"; echo "score=$score"; } >> "$GITHUB_OUTPUT"
+        {
+          echo "### Portfolio page check: $passed/$total ($score%)"
+          grep '^FAIL ' <<<"$out" | sed 's/^FAIL /- ✗ /' || true
+        } >> "$GITHUB_STEP_SUMMARY"
+        [ "$score" -ge "$MIN" ] || { echo "::error::$passed/$total checks passed ($score%), below $MIN%"; exit 1; }

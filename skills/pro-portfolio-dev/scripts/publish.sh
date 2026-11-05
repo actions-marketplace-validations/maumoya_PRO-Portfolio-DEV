@@ -39,7 +39,9 @@ if ! gh api "repos/$slug/pages" >/dev/null 2>&1; then
   echo "Pages turned on: main $path"
 fi
 for _ in $(seq 1 120); do
-  if curl -fsSL "$url?$stamp" 2>/dev/null | grep -q "$stamp"; then
+  # Read the whole page first: `curl | grep -q` fails under pipefail when grep exits early.
+  body=$(curl -fsSL "$url?$stamp" 2>/dev/null || true)
+  if [[ "$body" == *"$stamp"* ]]; then
     echo "LIVE $url in $(( $(date +%s) - start )) s (build $stamp)"; exit 0
   fi
   sleep 5

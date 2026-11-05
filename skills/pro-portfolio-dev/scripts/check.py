@@ -58,6 +58,19 @@ def png_size(p: pathlib.Path) -> tuple:
     return struct.unpack(">II", head[16:24]) if head[:8] == b"\x89PNG\r\n\x1a\n" else (0, 0)
 
 
+def i18n_check(raw: str) -> tuple:
+    """Every language in the page's UI table has the same keys. Sites not built by build.py have no table."""
+    name = "every language has every UI key"
+    if not raw.strip():
+        return (name + " (no i18n table)", True)
+    try:
+        ui = json.loads(raw)["ui"]
+        keys = set(ui["en"])
+        return (name, all(set(v) == keys for v in ui.values()))
+    except (ValueError, KeyError):
+        return (name, False)
+
+
 def run(site: pathlib.Path) -> list:
     res = [(f"file {f}", (site / f).exists()) for f in FILES]
     idx = site / "index.html"
@@ -80,12 +93,7 @@ def run(site: pathlib.Path) -> list:
     res.append(("og.png 1200x630", (site / "og.png").exists() and png_size(site / "og.png") == (1200, 630)))
     res.append(("every img has alt", s.imgs_no_alt == 0))
     res.append(("no external scripts/styles", not s.external))
-    try:
-        ui = json.loads(s.i18n)["ui"]
-        keys = set(ui["en"])
-        res.append(("every language has every UI key", all(set(v) == keys for v in ui.values())))
-    except (ValueError, KeyError):
-        res.append(("every language has every UI key", False))
+    res.append(i18n_check(s.i18n))
     kb = idx.stat().st_size / 1024
     res.append((f"page weight {kb:.0f} KB <= {MAX_KB}", kb <= MAX_KB))
     return res

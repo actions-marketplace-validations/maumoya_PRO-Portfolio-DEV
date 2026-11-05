@@ -1,0 +1,50 @@
+# Self-test of the root action.yml: a passing site and a broken one.
+name: Action self-test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions: read-all
+
+jobs:
+  self-test:
+    name: Action self-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Build the fixture site twice, then break one copy
+        run: |
+          python3 -m pip install --quiet --require-hashes -r tests/requirements.txt
+          for d in good bad; do
+            python3 skills/pro-portfolio-dev/scripts/build.py tests/fixture/repos.json tests/fixture/plan.json --out "$RUNNER_TEMP/$d"
+          done
+          : > "$RUNNER_TEMP/bad/og.png"
+
+      - name: Passing site
+        id: good
+        uses: ./
+        with:
+          site: ${{ runner.temp }}/good
+
+      - name: Broken site
+        id: bad
+        continue-on-error: true
+        uses: ./
+        with:
+          site: ${{ runner.temp }}/bad
+
+      - name: Assert outcomes
+        env:
+          GOOD: ${{ steps.good.outputs.score }}
+          BAD: ${{ steps.bad.outcome }}
+          BAD_SCORE: ${{ steps.bad.outputs.score }}
+        run: |
+          echo "good=$GOOD bad=$BAD bad_score=$BAD_SCORE"
+          [ "$GOOD" = 100 ] && [ "$BAD" = failure ] && [ "$BAD_SCORE" -lt 100 ]

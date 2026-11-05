@@ -1,3 +1,4 @@
 demo/site/
 __pycache__/
 .DS_Store
+launch/lighthouse/trace.json.gz

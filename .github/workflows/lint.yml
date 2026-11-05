@@ -23,4 +23,6 @@ jobs:
         run: bash scripts/lint_skill.sh .
 
       - name: Unit tests (offline build + check)
-        run: python3 -m unittest discover -s tests -v
+        run: |
+          python3 -m pip install --quiet --require-hashes -r tests/requirements.txt
+          python3 -m unittest discover -s tests -v
