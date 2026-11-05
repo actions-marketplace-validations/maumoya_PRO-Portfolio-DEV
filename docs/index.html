@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="build" content="ppd-20261104225346">
+<meta name="build" content="ppd-20261104225952">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
@@ -324,6 +324,18 @@ footer{border-top:1px solid var(--line);margin-top:72px;padding:28px 0;color:var
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.15 });
     $$('.fx').forEach(function (el) { io.observe(el); });
+  }
+
+  // ---- #tour: an 8-second self-running demo (typo search, languages, right-to-left, a theme) for recordings
+  if (location.hash === '#tour') {
+    var at = 0, step = function (ms, fn) { at += ms; setTimeout(fn, at); };
+    'finanse'.split('').forEach(function (c) { step(110, function () { q.focus(); q.value += c; show(); }); });
+    step(1300, function () { go(res[0]); });
+    step(1400, function () { scrollTo({ top: 0, behavior: 'smooth' }); setLang('es'); });
+    step(1100, function () { setLang('ja'); });
+    step(1000, function () { setLang('ar'); });
+    step(1000, function () { setTheme('ocean'); });
+    step(1000, function () { setLang('en'); });
   }
 
   var pref = store.get('ppd-lang') || (navigator.language || 'en').slice(0, 2);
