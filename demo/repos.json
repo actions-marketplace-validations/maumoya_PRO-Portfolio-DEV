@@ -176,7 +176,7 @@
    "description": "Agent skill: turns your GitHub repos into a live portfolio page on GitHub Pages, with SEO, 10 languages, themes and smart search.",
    "html_url": "https://github.com/maumoya/PRO-Portfolio-DEV",
    "homepage": "https://maumoya.github.io/PRO-Portfolio-DEV/",
-   "language": "Python",
+   "language": "HTML",
    "topics": [
     "agent-skills",
     "claude-code",
@@ -191,7 +191,7 @@
    ],
    "stargazers_count": 0,
    "forks_count": 0,
-   "pushed_at": "2026-11-05T03:53:45Z",
+   "pushed_at": "2026-11-05T03:59:23Z",
    "created_at": "2026-11-05T03:49:54Z",
    "fork": false,
    "archived": false
